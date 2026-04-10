@@ -27,9 +27,9 @@ with st.sidebar:
     psm_mode = st.selectbox(
         "辨識模式", 
         options=[1, 7, 3, 6], 
-        format_func=lambda x: {1: "自動辨識", 7: "單行文字 (推薦)", 3: "全圖辨識", 6: "區塊辨識"}[x]
+        format_func=lambda x: {1: "自動辨識", 7: "單行文字", 3: "全圖辨識", 6: "區塊辨識"}[x]
     )
-    st.info("模式 7 最適合處理單一條長序號。")
+    st.info("單一條長序號建議使用單行文字。")
 
 # --- 檔案上傳區 ---
 uploaded_file = st.file_uploader("選擇圖片...", type=["png", "jpg", "jpeg", "bmp"])
