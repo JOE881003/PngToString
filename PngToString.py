@@ -6,7 +6,7 @@ import os
 # --- 設定網頁標題 ---
 st.set_page_config(page_title="序號辨識小助手", page_icon="🔍")
 
-st.title("🔍 截圖序號辨識")
+st.title("截圖序號辨識")
 st.markdown("將截圖拖入下方，辨識結果會直接顯示並可一鍵複製。")
 
 # --- 💡 重要修改：Tesseract 路徑處理 ---
@@ -26,7 +26,7 @@ with st.sidebar:
     st.header("⚙️ 設定")
     psm_mode = st.selectbox(
         "辨識模式", 
-        options=[7, 1, 3, 6], 
+        options=[1, 7, 3, 6], 
         format_func=lambda x: {1: "自動辨識", 7: "單行文字 (推薦)", 3: "全圖辨識", 6: "區塊辨識"}[x]
     )
     st.info("模式 7 最適合處理單一條長序號。")
